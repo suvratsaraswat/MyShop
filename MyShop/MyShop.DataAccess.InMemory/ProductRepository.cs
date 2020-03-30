@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.Caching;
-using MyShop.Core;
+using MyShop.core;
 using MyShop.core.Models;
 
 namespace MyShop.DataAccess.InMemory
@@ -68,7 +68,7 @@ namespace MyShop.DataAccess.InMemory
 
         public void Delete(string Id)
         {
-            Product productToDelete = products.Find(p => p.Id == product.Id);
+            Product productToDelete = products.Find(p => p.Id == Id);
 
             if (productToDelete != null)
             {
